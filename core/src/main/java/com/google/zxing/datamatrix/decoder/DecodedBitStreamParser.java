@@ -189,7 +189,8 @@ final class DecodedBitStreamParser {
             return Mode.BASE256_ENCODE;
           case 232: // FNC1
             fnc1positions.add(result.length());
-            result.append((char) 29); // translate as ASCII 29
+            // result.append((char) 29); // translate as ASCII 29
+            result.append("{FNC1}"); // Epoch8 Modification
             break;
           case 233: // Structured Append
           case 234: // Reader Programming
@@ -293,7 +294,8 @@ final class DecodedBitStreamParser {
               switch (cValue) {
                 case 27: // FNC1
                   fnc1positions.add(result.length());
-                  result.append((char) 29); // translate as ASCII 29
+                  // result.append((char) 29); // translate as ASCII 29
+                  result.append("{FNC1}"); // Epoch8 Modification
                   break;
                 case 30: // Upper Shift
                   upperShift = true;
@@ -385,7 +387,8 @@ final class DecodedBitStreamParser {
               switch (cValue) {
                 case 27: // FNC1
                   fnc1positions.add(result.length());
-                  result.append((char) 29); // translate as ASCII 29
+                  // result.append((char) 29); // translate as ASCII 29
+                  result.append("{FNC1}"); // Epoch8 Modification
                   break;
                 case 30: // Upper Shift
                   upperShift = true;
